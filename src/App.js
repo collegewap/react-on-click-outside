@@ -7,7 +7,8 @@ function App() {
 
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
-      // If the menu is open and the clicked target is not within the menu, then close the menu
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
       if (isMenuOpen && ref.current && !ref.current.contains(e.target)) {
         setIsMenuOpen(false);
       }
@@ -20,6 +21,7 @@ function App() {
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
   }, [isMenuOpen]);
+
   return (
     <div className="wrapper">
       <button className="button" onClick={() => setIsMenuOpen(true)}>
