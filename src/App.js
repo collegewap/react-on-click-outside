@@ -22,10 +22,7 @@ function App() {
   }, [isMenuOpen]);
   return (
     <div className="wrapper">
-      <button
-        className="button"
-        onClick={() => setIsMenuOpen((oldState) => !oldState)}
-      >
+      <button className="button" onClick={() => setIsMenuOpen(true)}>
         Click Me
       </button>
       {isMenuOpen && (
