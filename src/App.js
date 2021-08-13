@@ -23,12 +23,15 @@ function App() {
   }, [isMenuOpen]);
 
   return (
-    <div className="wrapper">
-      <button className="button" onClick={() => setIsMenuOpen(true)}>
+    <div className="wrapper" ref={ref}>
+      <button
+        className="button"
+        onClick={() => setIsMenuOpen((oldState) => !oldState)}
+      >
         Click Me
       </button>
       {isMenuOpen && (
-        <ul className="list" ref={ref}>
+        <ul className="list">
           <li className="list-item">dropdown option 1</li>
           <li className="list-item">dropdown option 2</li>
           <li className="list-item">dropdown option 3</li>
